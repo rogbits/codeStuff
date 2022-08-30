@@ -232,7 +232,7 @@ class IpParser {
 
 	checkSepCount() {
 		if (this.isIp4Mode() && this.sepCount > 3)
-			return new Error(`ip4 cannot have have more than 3 separators(.) -- ip:${this.input.slice(0, this.ip4MaxLength)}`);
+			return new Error(`ip4 cannot have more than 3 separators(.) -- ip:${this.input.slice(0, this.ip4MaxLength)}`);
 		if (this.isIp6Mode() && this.sepCount > 7)
 			return new Error(`ip6 cannot have more than 7 separators(:) -- ip:${this.input.slice(0, this.ip6MaxLength)}`);
 		return null;

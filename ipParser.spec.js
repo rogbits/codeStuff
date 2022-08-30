@@ -400,7 +400,7 @@ describe('IpParser', () => {
 		ipParser.mode = 'ip4';
 		ipParser.input = '1.1.1.1.1';
 		let error = ipParser.checkSepCount();
-		assert(error.message === 'ip4 cannot have have more than 3 separators(.) -- ip:1.1.1.1.1');
+		assert(error.message === 'ip4 cannot have more than 3 separators(.) -- ip:1.1.1.1.1');
 
 		ipParser.sepCount = 8;
 		ipParser.mode = 'ip6';
